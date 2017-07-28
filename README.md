@@ -56,7 +56,7 @@ GitPython files. Used for python git integration.
 * Open FGFS Launcher.
 * Go to Addons > Additional Aircraft Locations > + and add your Developer Aircraft path. Like C:\Git2FGPlane\DownloadedAircrafts\DEVELOPERNAME\Aircraft
 * Then now you have all planes from this DEVELOPER in your launcher.
-* Choice one aircraft and have a nice flight.
+* Choose one aircraft and have a nice flight.
 
 ##### You'll need run Git2FGPlane.py when you need to update your aircrafts. It'll not runs by itself.
 ##### Git2FGPlane will update all aircrafts, so this process can take a long time.
