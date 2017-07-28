@@ -25,7 +25,7 @@ for link in lines :
 print("\n")
 i = 1
 for link in lines:
-    print('Updating {} | {} de {} : '.format(link,i, len(lines)))
+    print('Updating {} | {} of {} : '.format(link,i, len(lines)))
     PATH_NAME = "DownloadedAircrafts/{}/Aircraft/{}".format(link.split('.com/')[1].split('/')[0],link.split('.com/')[1].split('/')[1].replace('.git',''))
     try :
         IS_GIT = True  if Repo(PATH_NAME).git_dir else False
