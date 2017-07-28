@@ -1,0 +1,5 @@
+Downloading
+Finded Config File...Starting...
+Registered Airplanes:
+Updating {} | {} de {} : 
+Finished Updates. Tap ENTER to close.

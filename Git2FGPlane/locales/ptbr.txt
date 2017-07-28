@@ -1,0 +1,5 @@
+Baixando
+Arquivo de Configuração Encontrado...Iniciando...
+Aeronaves Cadastradas:
+Atualizando {} | {} de {} : 
+Atualizações Finalizadas. Tecle ENTER para finalizar.
