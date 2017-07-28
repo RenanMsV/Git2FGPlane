@@ -7,25 +7,25 @@ from git import *
 
 class Progress(RemoteProgress):
     def update(self, op_code, cur_count, max_count=None, message=''):
-        print('Baixando: (==== {} ====)'.format(message), end='\r')
+        print('Downloading: (==== {} ====)'.format(message), end='\r')
 
 def getOut(msg):
-    input('{}. Tecle ENTER para Fechar'.format(msg))
+    input('{}. Press ENTER to close'.format(msg))
     exit()
 
 try:
     lines = open('Git2FGPlaneCfg.txt', 'r').read().splitlines()
 except:
-    getOut('Erro: Arquivo de Configuração não Encontrado ou sem Permissão de Acesso.\n')
-print('Arquivo de Configuração Encontrado...Iniciando...\n\nAéronaves Cadastradas:')
+    getOut('Error: Configuration file not found. Or no read level.\n')
+print('Configuration file found...Starting...\n\nRegistered aircrafts:')
 if not lines :
-    getOut("\nNenhuma Aéronave Cadastrada")
+    getOut("\nNone registered aircraft was found.")
 for link in lines :
     print(link)
 print("\n")
 i = 1
 for link in lines:
-    print('Atualizando {} | {} de {} : '.format(link,i, len(lines)))
+    print('Updating {} | {} de {} : '.format(link,i, len(lines)))
     PATH_NAME = "DownloadedAircrafts/{}/Aircraft/{}".format(link.split('.com/')[1].split('/')[0],link.split('.com/')[1].split('/')[1].replace('.git',''))
     try :
         IS_GIT = True  if Repo(PATH_NAME).git_dir else False
@@ -40,7 +40,7 @@ for link in lines:
         origin = g.remotes.origin
         origin.pull(progress=Progress())
     i=i+1
-getOut("\nAtualizações Finalizadas")
+getOut("\nUpdates finished")
 
 if _platform == "linux" or _platform == "linux2":
     # linux
